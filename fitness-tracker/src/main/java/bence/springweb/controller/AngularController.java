@@ -21,6 +21,7 @@ public class AngularController {
 	public String hellohtml(){
 		return "index";
 	}
+	//plusz komment
 	
 	/*
 	@RequestMapping("/index.html")
