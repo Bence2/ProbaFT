@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="mainmodule">
+<head>
+<script type="text/javascript" src="webjars/angularjs/1.4.1/angular.js"></script>
+<script type="text/javascript"
+	src="webjars/angularjs/1.4.1/angular-route.js"></script>
+<!-- <script type="text/javascript" src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>  -->	
+<script src="static/js/main.js"></script>
+<script src="static/js/getmessages.js"></script>
+<script src="static/js/sendmessages.js"></script>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<!-- <script src="static/css/style.css"></script> -->
+<!--         <script src="js/main.js"></script> -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-controller="MainController">
+	{{7/6}}
+	<a href="/chatapp/index">chatappindex</a>
+	<a href="#!chatapp/route">route</a>
+	<div ng-include="'static/html/include.html'"></div>
+	<button ng-click="getMessages()">Click</button>
+	{{messages}}
+	<div>
+		<div>
+			<div ng-repeat="message in messages">
+				<div class="message">message.sendersName</div>
+				<div class="message">message.message</div>
+			</div>
+		</div>
+		<div class="inputfield">
+			name<input type="text" id="sendersname" ng-model="sendersmessage.sendersName">
+			message<input type="textarea" id="message" ng-model="sendersmessage.message">
+			age<input type="text" id="sendersage" ng-model="sendersmessage.sendersAge">
+			date<input type="text" id="dateofmessage" ng-model="sendersmessage.dateOfMessage">
+		</div>
+		<div>{{sendersmessage}}</div>
+	 	<button ng-click="sendMessages(sendersmessage)">Send Message</button>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.proba {
+	background-color: red;
+	max-width: 800px;
+}
+
+.message {
+}
+
+.inputfield {
+	background-color: yellow;
+	border-radius: 10px;
+	margin: 10px;
+	border: 0.1px solid;
+	padding: 10px;
+	width: 40%;
+}
+.contacts{
+	width: 30p%;
+}
