@@ -8,7 +8,9 @@
 	   					   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 	<mvc:annotation-driven />
 <!-- 	<mvc:resources location="/WEB-INF/" mapping="/static/**" /> -->
-	<mvc:resources location="/WEB-INF/static/" mapping="/static/**" />
+<!-- 	<mvc:resources location="/WEB-INF/static/" mapping="/static/**" /> -->
+<!-- 	<mvc:resources location="/WEB-INF/static/" mapping="/chatapp/static/**" /> -->
+	<mvc:resources location="/WEB-INF/static/" mapping="**" />
 	
 <!--<mvc:resources location="/webjars/" mapping="/webjars/**"></mvc:resources> -->
 	<mvc:resources location="classpath:/META-INF/resources/webjars/" mapping="/webjars/**"/>

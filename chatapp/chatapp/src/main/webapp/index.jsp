@@ -8,6 +8,9 @@
 	src="webjars/angularjs/1.4.1/angular-route.js"></script>
 <!-- <script type="text/javascript" src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>  -->	
 <script src="static/js/main.js"></script>
+<script src="js/main.js"></script>
+<script src="/chatapp/static/js/main.js"></script>
+
 <script src="static/js/getmessages.js"></script>
 <script src="static/js/sendmessages.js"></script>
 <link rel="stylesheet" type="text/css" href="static/css/style.css">
@@ -20,7 +23,7 @@
 <body ng-controller="MainController">
 	{{7/6}}
 	<a href="/chatapp/index">chatappindex</a>
-	<a href="#!chatapp/route">route</a>
+	<a href="/#chatapp/route">route</a>
 	<div ng-include="'static/html/include.html'"></div>
 	<button ng-click="getMessages()">Click</button>
 	{{messages}}

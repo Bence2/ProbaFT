@@ -31,9 +31,9 @@ var MainController = function($scope, $http, getmessagesservice, sendmessagesser
 var app = angular.module("mainmodule", ['ngRoute']);
 app.controller("MainController", MainController);
 
-angular.module("mainmodule").config(function($routeProvider,$locationProvider){
+angular.module("mainmodule").config(function($routeProvider){
 	console.log("route resz");
-	$locationProvider.hashPrefix('!');
+	//$locationProvider.hashPrefix('!');
 	$routeProvider.
 			when(
 				"/chatapp/route", 
