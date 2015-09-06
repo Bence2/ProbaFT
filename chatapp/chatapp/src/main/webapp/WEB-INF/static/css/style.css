@@ -1,9 +1,10 @@
 .proba {
 	background-color: red;
-	max-width: 800px;
+	/*max-width: 800px;*/
 }
 
 .message {
+	/*max-width: 800px;*/
 }
 
 .inputfield {
@@ -12,8 +13,11 @@
 	margin: 10px;
 	border: 0.1px solid;
 	padding: 10px;
-	width: 40%;
 }
 .contacts{
-	width: 30p%;
+}
+
+.maincontainer {
+	margin: auto;
+	max-width: 800px;
 }

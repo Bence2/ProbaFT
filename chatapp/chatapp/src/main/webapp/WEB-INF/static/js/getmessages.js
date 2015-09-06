@@ -1,7 +1,7 @@
 var getmessagesservice = function($http) {
 
 	var getMessages = function() {
-		return $http.get("/chatapp/getmessages").then(function(response) {
+		return $http.get("/chatapp/getmessages.json").then(function(response) {
 			return response.data;
 		});
 	};

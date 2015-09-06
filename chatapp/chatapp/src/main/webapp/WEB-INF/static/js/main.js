@@ -1,11 +1,17 @@
-var MainController = function($scope, $http, getmessagesservice, sendmessagesservice) {
+var MainController = function($scope, $http,$location,  getmessagesservice, sendmessagesservice) {
 
 	$scope.logSthg = function(){
 		console.log("logolok");
 	};
 	
+//	var changeUrl = function(){
+//		$location.path('/chatapp/route')
+//	};
+	// ez így fos volt
+	
 	var getMessagesSucceeds = function(data) {
 		$scope.messages = data;
+		$location.path('/route');
 	}
 	
 	var sendMessagesSucceeds = function(data) {
@@ -29,20 +35,27 @@ var MainController = function($scope, $http, getmessagesservice, sendmessagesser
 };
 
 var app = angular.module("mainmodule", ['ngRoute']);
-app.controller("MainController", MainController);
-
 angular.module("mainmodule").config(function($routeProvider){
 	console.log("route resz");
 	//$locationProvider.hashPrefix('!');
 	$routeProvider.
-			when(
-				"/chatapp/route", 
+//			when(
+//				"/chatapp/route", 
+//					{
+//		        templateUrl: "static/html/route.html"
+//		        //controller: "MainController"
+//					}
+//				).
+				when(
+				"/route", 
 					{
-		        templateUrl: "static/html/route.html",
-		        controller: "MainController"
+		        templateUrl: "static/html/route.html"
+		        //controller: "MainController"
 					}
 				)
 		});
+
+app.controller("MainController", MainController);
 
 //app.config(function($routeProvider){
 //	$routeProvider.
