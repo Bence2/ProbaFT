@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript" src="webjars/angularjs/1.4.1/angular.js"></script>
+<script type="text/javascript" src="webjars/angularjs/1.4.1/angular-route.js"></script>
+<script type="text/javascript" src="static/js/main.js"></script>
+
+<script type="text/javascript" src="static/js/getmessages.js"></script>
+<script type="text/javascript" src="static/js/sendmessages.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body  ng-app="mainmodule" class="maincontainer">
+	<div ng-controller="MainController" >
+		<button ng-click="getMessages()">Click</button>
+		{{messages}}
+	</div>
+	<div ng-view></div>
+
+</body>
+</html>
