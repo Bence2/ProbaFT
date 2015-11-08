@@ -11,7 +11,14 @@ angular.module("mainmodule").config(function($routeProvider){
 					{
 		        templateUrl: "static/html/rolunk.html"
 					}
+				).
+				when(
+				"/carousel", 
+					{
+		        templateUrl: "static/html/carousel.html"
+					}
 				)
+				
 		});
 
 app.controller("MainController", MainController);
